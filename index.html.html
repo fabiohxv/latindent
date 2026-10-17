@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATINDENT | Agencia de Marketing para Clínicas Odontológicas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        latindark: '#0B132B',
+                        latinnavy: '#1C2541',
+                        latincyan: '#00D2FF',
+                        latinblue: '#0284C7',
+                        latinemerald: '#10B981',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 25px -5px rgba(0, 210, 255, 0.4)',
+                        'glow-lg': '0 0 35px -5px rgba(0, 210, 255, 0.6)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #00D2FF 0%, #38BDF8 50%, #818CF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0B132B 0%, #1C2541 100%);
+        }
+        .gradient-card {
+            background: linear-gradient(180deg, rgba(28, 37, 65, 0.6) 0%, rgba(11, 19, 43, 0.8) 100%);
+        }
+        .pulse-emerald {
+            animation: pulse-emerald-anim 2s infinite;
+        }
+        @keyframes pulse-emerald-anim {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-latincyan selection:text-latindark">
+
+    <!-- ==================== HEADER / CABECERA ==================== -->
+    <header class="sticky top-0 z-40 backdrop-blur-xl bg-latindark/85 border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Latindent -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-latinblue to-latincyan flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform duration-300">
+                        <!-- SVG Logo Dental Growth -->
+                        <svg class="w-7 h-7 text-latindark" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.5 2 6 4.5 6 7.5C6 9.5 7 11.5 8 13.5C9 15.5 9.5 17.5 9.5 19.5C9.5 20.9 10.6 22 12 22C13.4 22 14.5 20.9 14.5 19.5C14.5 17.5 15 15.5 16 13.5C17 11.5 18 9.5 18 7.5C18 4.5 15.5 2 12 2ZM12 6C13.1 6 14 6.9 14 8C14 9.1 13.1 10 12 10C10.9 10 10 9.1 10 8C10 6.9 10.9 6 12 6Z"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold tracking-tight text-white flex items-center">
+                            LATIN<span class="text-latincyan">DENT</span>
+                        </span>
+                        <span class="text-[10px] tracking-widest uppercase font-semibold text-slate-400 -mt-1">
+                            Dental Growth Agency
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Nav Desktop -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                    <a href="#hero" class="hover:text-latincyan transition-colors">Inicio</a>
+                    <a href="#servicios" class="hover:text-latincyan transition-colors">Planes & Soluciones</a>
+                    <a href="#nosotros" class="hover:text-latincyan transition-colors">Sobre Nosotros</a>
+                    <a href="#casos" class="hover:text-latincyan transition-colors">Casos de Éxito</a>
+                </nav>
+
+                <!-- Estado & CTA Header -->
+                <div class="hidden lg:flex items-center gap-5">
+                    <!-- Indicador de Estado -->
+                    <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs font-medium text-emerald-400">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span>Asesores Disponibles Hoy</span>
+                    </div>
+
+                    <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Quisiera%20solicitar%20un%20diagn%C3%B3stico%20de%20marketing%20gratuito%20para%20mi%20cl%C3%ADnica%20dental." 
+                       target="_blank"
+                       class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-latincyan to-latinblue text-latindark font-bold text-sm shadow-glow hover:shadow-glow-lg hover:scale-[1.02] transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Diagnóstico Gratis</span>
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-latinnavy/95 border-b border-slate-800 px-4 pt-3 pb-6 space-y-4">
+            <a href="#hero" class="mobile-link block text-slate-200 hover:text-latincyan font-medium py-1">Inicio</a>
+            <a href="#servicios" class="mobile-link block text-slate-200 hover:text-latincyan font-medium py-1">Planes & Soluciones</a>
+            <a href="#nosotros" class="mobile-link block text-slate-200 hover:text-latincyan font-medium py-1">Sobre Nosotros</a>
+            <a href="#casos" class="mobile-link block text-slate-200 hover:text-latincyan font-medium py-1">Casos de Éxito</a>
+            <div class="pt-2 flex flex-col gap-3">
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-xs font-medium text-emerald-400 w-max">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Agencia Abierta</span>
+                </div>
+                <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Quisiera%20solicitar%20un%20diagn%C3%B3stico%20gratuito." 
+                   target="_blank" 
+                   class="w-full text-center py-3 rounded-xl bg-latincyan text-latindark font-bold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Diagnóstico por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <!-- Luces de fondo estilo Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-latincyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna Texto -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs sm:text-sm font-semibold text-latincyan">
+                        <span class="flex h-2 w-2 rounded-full bg-latincyan"></span>
+                        Especialistas en Odontología & Ortodoncia
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+                        Multiplica los pacientes de tu clínica dental con <span class="gradient-text">Estrategias de High Ticket</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Llenamos tu agenda con pacientes calificados para <strong class="text-white">Implantes, Ortodoncia y Diseño de Sonrisa</strong>. Más consultas vendidas, menos ausentismo.
+                    </p>
+
+                    <!-- CTAs principales -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#servicios" 
+                           class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-latincyan to-latinblue text-latindark font-extrabold text-base shadow-glow hover:shadow-glow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3">
+                            <span>Ver Menú de Soluciones</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Quisiera%20solicitar%20informaci%C3%B3n%20para%20aumentar%20los%20pacientes%20de%20mi%20consultorio." 
+                           target="_blank"
+                           class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-700 text-slate-100 hover:text-latincyan hover:border-latincyan/50 font-bold text-base transition-all duration-300 flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i>
+                            <span>Pedir Diagnóstico Gratis</span>
+                        </a>
+                    </div>
+
+                    <!-- Métricas destacadas -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-white">+50</p>
+                            <p class="text-xs text-slate-400">Clínicas impulsadas</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-latincyan">+15K</p>
+                            <p class="text-xs text-slate-400">Citas agendadas</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">3.8x</p>
+                            <p class="text-xs text-slate-400">ROI Promedio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Imagen / Mockup -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Marco Decorativo -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-latincyan to-indigo-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop" 
+                                 alt="Clínica Odontológica Moderna - Latindent" 
+                                 class="w-full h-[420px] object-cover"
+                                 onerror="this.src='https://placehold.co/600x800/0B132B/00D2FF?text=Clinica+Dental+Latindent'">
+                            
+                            <!-- Overlay flotante informativo -->
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-950/85 backdrop-blur-md border border-slate-700/60 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                                        <i class="fa-solid fa-user-plus text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-white">Nuevos Pacientes esta semana</p>
+                                        <p class="text-xs text-slate-400">Captación activa en Google y Meta Ads</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-bold text-emerald-400">+42 citas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MENÚ DE SERVICIOS / SOLUCIONES ==================== -->
+    <section id="servicios" class="py-20 bg-latinnavy/40 relative border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado de Sección -->
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="text-latincyan text-sm font-bold uppercase tracking-wider">Carta de Soluciones Odontológicas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Planes de Crecimiento para tu Clínica
+                </h2>
+                <p class="text-slate-300">
+                    Selecciona los paquetes de captación, imagen corporativa o automatización diseñados exclusivamente para odontólogos y centros dentales.
+                </p>
+            </div>
+
+            <!-- Filtros por Categoría (JavaScript interactivo) -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+                <button onclick="filterCategory('todos')" id="btn-todos" class="category-btn active px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 bg-latincyan text-latindark shadow-glow">
+                    Todos los Servicios
+                </button>
+                <button onclick="filterCategory('captacion')" id="btn-captacion" class="category-btn px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700">
+                    Captación de Pacientes
+                </button>
+                <button onclick="filterCategory('branding')" id="btn-branding" class="category-btn px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700">
+                    Branding y Redes
+                </button>
+                <button onclick="filterCategory('software')" id="btn-software" class="category-btn px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700">
+                    Web & Agendamiento
+                </button>
+            </div>
+
+            <!-- Grid de Tarjetas de Servicios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+
+                <!-- Servicio 1 -->
+                <div class="service-card captacion bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-latincyan/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Campañas Google & Meta Ads" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/1C2541/00D2FF?text=Captacion+Ads'">
+                            <span class="absolute top-3 right-3 bg-latincyan/90 text-latindark text-xs font-black px-3 py-1 rounded-full uppercase">
+                                Más Vendido
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-bold text-white group-hover:text-latincyan transition-colors">
+                                    Pack Impulso Implantes & Ortodoncia
+                                </h3>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Campañas optimizadas en Meta Ads (Instagram/Facebook) y Google Search enfocadas exclusivamente en tratamientos de alto valor.
+                            </p>
+                            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Embudos directos a WhatsApp</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Segmentación por poder adquisitivo</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Anuncios de alta conversión</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Desde</span>
+                            <span class="text-xl font-black text-white">$450 <span class="text-xs font-normal text-slate-400">/mes</span></span>
+                        </div>
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Me%20interesa%20el%20Pack%20Impulso%20Implantes%20%26%20Ortodoncia%20para%20mi%20cl%C3%ADnica.%20%C2%BFMe%20dan%20m%C3%A1s%20detalles?" 
+                           target="_blank"
+                           class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all duration-200 flex items-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card branding bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-latincyan/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Gestión de Redes Dentales" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/1C2541/00D2FF?text=Redes+Sociales'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-white group-hover:text-latincyan transition-colors">
+                                Gestión de Redes & Contenido Médico
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Posiciona la autoridad de tus doctores. Creación de Reels/TikToks dinámicos, edición profesional y publicaciones educativas.
+                            </p>
+                            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> 12 Reels de alta calidad al mes</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Estrategia de marca profesional</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Guiones educativos y virales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Desde</span>
+                            <span class="text-xl font-black text-white">$380 <span class="text-xs font-normal text-slate-400">/mes</span></span>
+                        </div>
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Me%20interesa%20el%20servicio%20de%20Gesti%C3%B3n%20de%20Redes%20%26%20Contenido%20M%C3%A9dico.%20Quiero%20m%C3%A1s%20informaci%C3%B3n." 
+                           target="_blank"
+                           class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all duration-200 flex items-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card software bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-latincyan/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Web Odontológica de Alta Conversión" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/1C2541/00D2FF?text=Web+Dental'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-white group-hover:text-latincyan transition-colors">
+                                Web Dental + Bot de Agendamiento
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Sitio web ultra rápido adaptado a celulares, optimizado con integración a WhatsApp y confirmación de citas en tiempo real.
+                            </p>
+                            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Diseño UI/UX Médico Premium</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> SEO para Google Maps local</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Bot de respuesta rápida</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Pago único</span>
+                            <span class="text-xl font-black text-white">$520</span>
+                        </div>
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Deseo%20cotizar%20el%20desarrollo%20de%20la%20Web%20Dental%20%2B%20Bot%20de%20Agendamiento." 
+                           target="_blank"
+                           class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all duration-200 flex items-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="service-card captacion bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-latincyan/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Diseño de Sonrisa & Estética" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/1C2541/00D2FF?text=Diseno+Sonrisa'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-white group-hover:text-latincyan transition-colors">
+                                Campaña Express Diseño de Sonrisa
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Estrategia intensiva de 30 días para promocionar Carillas de Porcelana, Blanqueamiento y Alineadores invisibles.
+                            </p>
+                            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Copywriting persuasivo de ofertas</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Filtrado de clientes potenciales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Plan de 30 días</span>
+                            <span class="text-xl font-black text-white">$300</span>
+                        </div>
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Quiero%20solicitar%20la%20Campa%C3%B1a%20Express%20de%20Dise%C3%B1o%20de%20Sonrisa." 
+                           target="_blank"
+                           class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all duration-200 flex items-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="service-card branding bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-latincyan/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Fotografía y Producción Dental" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/1C2541/00D2FF?text=Identidad+Dental'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-white group-hover:text-latincyan transition-colors">
+                                Identidad Visual & Producción Audiovisual
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Renovación de marca para tu clínica: logotipo, manual corporativo y jornada de fotos/videos profesionales en consultorio.
+                            </p>
+                            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Sesión presencial / guía audiovisual</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Diseño de papelería e instalaciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Desde</span>
+                            <span class="text-xl font-black text-white">$400</span>
+                        </div>
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Me%20interesa%20la%20Identidad%20Visual%20y%20Producci%C3%B3n%20Audiovisual%20para%20mi%20cl%C3%ADnica." 
+                           target="_blank"
+                           class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all duration-200 flex items-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="service-card software bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-latincyan/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Capacitación Recepción Dental" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/1C2541/00D2FF?text=Entrenamiento+Ventas'">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-white group-hover:text-latincyan transition-colors">
+                                Entrenamiento de Ventas para Recepción
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Capacitamos a tus asistentes telefónicas y recepcionistas para convertir chats de WhatsApp en consultas confirmadas.
+                            </p>
+                            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Scripts de ventas por WhatsApp</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-latincyan"></i> Manejo de objeciones de precios</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-500 block">Taller intensivo</span>
+                            <span class="text-xl font-black text-white">$250</span>
+                        </div>
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Me%20gustar%C3%ADa%20contratar%20el%20Entrenamiento%20de%20Ventas%20para%20mi%20equipo%20de%20recepci%C3%B3n." 
+                           target="_blank"
+                           class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition-all duration-200 flex items-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOBRE NOSOTROS / PROPUESTA DE VALOR ==================== -->
+    <section id="nosotros" class="py-20 relative overflow-hidden bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Imagen Compuesta -->
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-latincyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop" 
+                             alt="Equipo Latindent Dental" 
+                             class="rounded-2xl border border-slate-800 shadow-lg object-cover h-64 w-full"
+                             onerror="this.src='https://placehold.co/400x500/1C2541/00D2FF?text=Doctor'">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=600&auto=format&fit=crop" 
+                             alt="Especialistas Odontólogos" 
+                             class="rounded-2xl border border-slate-800 shadow-lg object-cover h-64 w-full mt-8"
+                             onerror="this.src='https://placehold.co/400x500/1C2541/00D2FF?text=Atencion'">
+                    </div>
+                </div>
+
+                <!-- Contenido Texto -->
+                <div class="space-y-6">
+                    <span class="text-latincyan text-sm font-bold uppercase tracking-wider">Especialización 100% Odontológica</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                        No somos una agencia generalista. Entendemos el lenguaje clínico.
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        En <strong class="text-white">LATINDENT</strong> sabemos que vender un tratamiento de Ortodoncia Invisible o un Implante Dental no es lo mismo que vender productos masivos. Requiere construir <span class="text-latincyan font-semibold">confianza médica, autoridad y empatía</span>.
+                    </p>
+                    
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-latincyan shrink-0 mt-1">
+                                <i class="fa-solid fa-tooth text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Enfoque en Pacientes High-Ticket</h4>
+                                <p class="text-slate-400 text-sm">Priorizamos la atracción de tratamientos de alta rentabilidad para maximizar el margen de tu clínica.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-chart-line text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Garantía de Seguimiento y ROI</h4>
+                                <p class="text-slate-400 text-sm">Medimos exactamente cuántas llamadas, mensajes y consultas efectivas genera cada dólar invertido.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Deseo%20agendar%20una%20sesi%C3%B3n%20estrat%C3%A9gica%20con%20su%20equipo." 
+                           target="_blank"
+                           class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-slate-900 border border-latincyan/40 text-latincyan hover:bg-latincyan hover:text-latindark font-bold text-sm transition-all duration-300">
+                            <span>Agendar Sesión Estratégica</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CASOS DE ÉXITO / TESTIMONIOS ==================== -->
+    <section id="casos" class="py-20 bg-latinnavy/30 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-latincyan text-sm font-bold uppercase tracking-wider">Resultados Comprobados</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Lo que dicen los Odontólogos</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 relative">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic">
+                        "Pasamos de tener huecos libres todos los días a agendar más de 35 consultas mensuales de implantes. Latindent transformó por completo nuestra facturación."
+                    </p>
+                    <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-latincyan font-bold">
+                            DR
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Dr. Roberto Morales</h5>
+                            <p class="text-slate-500 text-xs">Director Dental Implantes - Lima</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 relative">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic">
+                        "El bot de agendamiento y los anuncios en Instagram nos trajeron un perfil de paciente que no regatea precios y valora el trabajo estético."
+                    </p>
+                    <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-latincyan font-bold">
+                            DRA
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Dra. Camila Reyes</h5>
+                            <p class="text-slate-500 text-xs">Especialista en Ortodoncia - Bogotá</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 relative">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm italic">
+                        "Excelente capacitación para nuestras recepcionistas. Aprendimos a responder por WhatsApp sin perder pacientes interesados."
+                    </p>
+                    <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-latincyan font-bold">
+                            DR
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Dr. Javier Silva</h5>
+                            <p class="text-slate-500 text-xs">Clínica Odontológica - Santiago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PIE DE PÁGINA (FOOTER) ==================== -->
+    <footer class="bg-latindark border-t border-slate-800/80 pt-16 pb-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Columna 1: Marca & Descripción -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-latinblue to-latincyan flex items-center justify-center text-latindark font-bold">
+                            <i class="fa-solid fa-tooth text-sm"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white">LATIN<span class="text-latincyan">DENT</span></span>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Agencia de aceleración y marketing digital especializada exclusivamente en el sector odontológico y clínicas dentales en Latinoamérica.
+                    </p>
+                    <div class="flex items-center gap-3 text-slate-300 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-latincyan hover:border-latincyan transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-latincyan hover:border-latincyan transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-latincyan hover:border-latincyan transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-latincyan hover:border-latincyan transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Horarios de Atención -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-base">Horarios de Atención</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="flex justify-between border-b border-slate-800/60 pb-1">
+                            <span>Lunes - Viernes:</span>
+                            <span class="text-slate-200 font-semibold">08:00 - 19:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/60 pb-1">
+                            <span>Sábados:</span>
+                            <span class="text-slate-200 font-semibold">09:00 - 14:00</span>
+                        </li>
+                        <li class="flex justify-between text-slate-500">
+                            <span>Domingos:</span>
+                            <span class="text-amber-400/80 font-medium">Soporte Urgencias</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Enlaces Rápidos -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-base">Navegación</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#hero" class="hover:text-latincyan transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-latincyan transition-colors">Planes y Precios</a></li>
+                        <li><a href="#nosotros" class="hover:text-latincyan transition-colors">Propuesta de Valor</a></li>
+                        <li><a href="#casos" class="hover:text-latincyan transition-colors">Casos de Éxito</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-base">Contacto Directo</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                            <a href="https://wa.me/51999888777" target="_blank" class="hover:text-white transition-colors">+51 999 888 777</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-latincyan text-sm"></i>
+                            <span>contacto@latindent.com</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-slate-400 text-sm"></i>
+                            <span>Atención a toda Latinoamérica</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© 2026 LATINDENT Marketing Dental. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-400">Términos del Servicio</a>
+                    <a href="#" class="hover:text-slate-400">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BOTÓN FLOTANTE PERMANENTE DE WHATSAPP ==================== -->
+    <a href="https://wa.me/51999888777?text=%C2%A1Hola%20Latindent!%20Deseo%20hacer%20una%20consulta%20general%20sobre%20sus%20servicios%20de%20marketing%20para%20cl%C3%ADnicas." 
+       target="_blank"
+       aria-label="Contactar por WhatsApp"
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 pulse-emerald group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <!-- Tooltip flotante al pasar mouse -->
+        <span class="absolute right-16 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl">
+            ¿Hablamos por WhatsApp?
+        </span>
+    </a>
+
+    <!-- ==================== JAVASCRIPT VAINILLA ==================== -->
+    <script>
+        // Lógica de Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lógica de Filtro de Categorías en el Menú de Soluciones
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const buttons = document.querySelectorAll('.category-btn');
+
+            // Actualizar estado activo de los botones
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-latincyan', 'text-latindark', 'shadow-glow');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+
+            const selectedBtn = document.getElementById(`btn-${category}`);
+            if (selectedBtn) {
+                selectedBtn.classList.remove('bg-slate-800', 'text-slate-300');
+                selectedBtn.classList.add('bg-latincyan', 'text-latindark', 'shadow-glow');
+            }
+
+            // Filtrar las tarjetas con animación de opacidad
+            cards.forEach(card => {
+                if (category === 'todos' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 200);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
